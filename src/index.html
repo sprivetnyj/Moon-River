@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{"title":"Главная"})
+
+<body>
+	<div class="wrapper" data-lp>
+		@@include('html/header.html')
+		<main class="page">
+			<section class="page__hero hero" data-fullscreen>
+				<div class="hero__container">
+					<div class="hero__body" data-anim="0,20,0.6,0.6">
+						<h1 class="hero__title">High jewelry</h1>
+						<a href="#" class="hero__link">Смотреть коллекцию</a>
+					</div>
+					<div class="hero__bottom" data-anim="20,0,0.6,0.9">
+						<div class="hero__name">Кольцо Trinity, Cartier</div>
+						<div class="hero__desc">Белое золото, бриллианты</div>
+						<div class="hero__price">498 000 ₽</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__category category">
+				<div class="category__body">
+					<a href="#" class="category__item" data-anim="0,20,0.6,0">
+						<div class="category__suptitle">Перейти в раздел</div>
+						<h2 class="category__title">Для мужчин</h2>
+					</a>
+					<a href="#" class="category__item" data-anim="0,20,0.6,0.3">
+						<div class="category__suptitle">Перейти в раздел</div>
+						<h2 class="category__title">Для женщин</h2>
+					</a>
+				</div>
+			</section>
+			<section class="page__location location">
+				<div class="location__body">
+					<div class="location__left" data-anim="-20,0,0.6,0">
+						<div class="location__content">
+							<h2 class="location__title section-title">Найди <br> бутик около себя</h2>
+							<p class="location__desc">Введите свой адрес и узнайте о самых ближайших бутиках к вам</p>
+							<form action="#" class="location__form form" data-form>
+								<label class="form__title visually-hidden" for="map-email">узнать о ближайшем бутике</label>
+								<div class="form__item">
+									<input class="form__input" type="email" id="map-email" placeholder="Введите адрес" data-required data-validate>
+									<button class="form__arrow" aria-label="Отправить">
+										<svg>
+											<use xlink:href="@img/icons/sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="location__map" data-anim="20,0,0.6,0">
+					</div>
+				</div>
+			</section>
+			<section class="page__products products">
+				<h2 class="visually-hidden">Наша коллекция</h2>
+				<div class="products__body">
+					<a href="#" class="products__item" data-anim="-20,0,0.6,0.6">
+						<div class="products__name">КОЛЬЦО jow's, Cartier</div>
+						<div class="products__desc">Белое золото, бриллианты</div>
+						<div class="products__price">674 000 ₽</div>
+					</a>
+					<a href="#" class="products__item" data-anim="0,20,0.6,0">
+						<div class="products__name">КОлье etoile, HUBLOT</div>
+						<div class="products__desc">Белое золото, бриллианты</div>
+						<div class="products__price">539 000 ₽</div>
+					</a>
+					<a href="#" class="products__item" data-anim="20,0,0.6,0.6">
+						<div class="products__name">Серьги moon, HUBLOT</div>
+						<div class="products__desc">Желтое золото, сапфир</div>
+						<div class="products__price">498 000 ₽</div>
+					</a>
+					<a href="#" class="products__item" data-anim="-20,0,0.6,0.3">
+						<div class="products__name">КОЛЬЦО croix, Cartier</div>
+						<div class="products__desc">Желтое, белое, розовое золото</div>
+						<div class="products__price">432 000 ₽</div>
+					</a>
+					<a href="#" class="products__item" data-anim="20,0,0.6,0.3">
+						<div class="products__name">серьги win, BLANCPAIN</div>
+						<div class="products__desc">Желтое золото, жемчуг</div>
+						<div class="products__price">398 000 ₽</div>
+					</a>
+				</div>
+			</section>
+			<section class="page__media media">
+				<div class="media__container">
+					<h2 class="media__title section-title" data-anim="0,20,0.6,0">Мы <br> в социальных сетях</h2>
+					<div class="media__body" data-anim="0,20,0.6,0.3">
+						<div class="media__slider slider-media swiper">
+							<div class="slider-media__body swiper-wrapper">
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/01.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/02.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/03.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/04.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/05.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/01.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/02.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/03.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/04.jpg" alt="украшение">
+									</div>
+								</div>
+								<div class="slider-media__slide slide-media swiper-slide">
+									<div class="slide-media__image bg">
+										<img src="@img/media/05.jpg" alt="украшение">
+									</div>
+								</div>
+							</div>
+							<div class="slider-media__bottom" data-anim="0,20,0.6,0.9">
+								<ul class="slider-media__social social">
+									<li class="social__item">
+										<a href="#" class="social__link" aria-label="facebook">
+											<svg>
+												<use xlink:href="@img/icons/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social__item">
+										<a href="#" class="social__link" aria-label="instagram">
+											<svg>
+												<use xlink:href="@img/icons/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+								<div class="slider-media__controls">
+									<button class="slider-media__arrow slider-media__arrow--prev swiper-button-prev" aria-label="Предыдущий слайд">
+										<svg>
+											<use xlink:href="@img/icons/sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+									<div class="slider-media__pagination swiper-pagination"></div>
+									<button class="slider-media__arrow swiper-button-next" aria-label="Следующий слайд">
+										<svg>
+											<use xlink:href="@img/icons/sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__info info">
+				<h2 class="visually-hidden">Контактная информация</h2>
+				<div class="info__body">
+					<div class="info__image bg" data-anim="-20,0,0.6,0">
+						<img src="@img/info/bg.jpg" alt="женщина с украшениями">
+					</div>
+					<div class="info__content" data-anim="20,0,0.6,0">
+						<div class="info__contacts contacts">
+							<div class="info__title">телефон флагманского магазина</div>
+							<a href="tel:+7800456456" class="info__link">+7 800 456 456</a>
+							<form action="#" class="contacts__form form form--dark" data-form>
+								<label class="form__title contacts__title" for="info-email">подпишитесь на новости</label>
+								<div class="form__item">
+									<input class="form__input" type="email" id="info-email" placeholder="Введите E-mail" data-required data-validate>
+									<button class="form__arrow" aria-label="Отправить">
+										<svg>
+											<use xlink:href="@img/icons/sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+		@@include('html/popup.html',{})
+	</div>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

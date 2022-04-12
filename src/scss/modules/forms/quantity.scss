@@ -1,0 +1,30 @@
+//================================================================================
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+.quantity {
+	width: rem(100);
+	height: rem(30);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	border: rem(1) solid #000;
+	// .quantity__button
+	&__button {
+		cursor: pointer;
+		color: #fff;
+		background-color: #000;
+	}
+	// .quantity__input
+	&__input {
+		width: 100%;
+		font-weight: 700;
+		text-align: center;
+		white-space: nowrap;
+	}
+}
+//================================================================================

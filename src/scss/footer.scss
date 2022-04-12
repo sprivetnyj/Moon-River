@@ -1,0 +1,98 @@
+//================================================================================
+.footer {
+	@include adaptiveValue("padding-top", 80, 50);
+	@include adaptiveValue("padding-bottom", 90, 50);
+	background-color: var(--color-dark);
+	// .footer__container
+	&__container {
+	}
+	// .footer__nav
+	&__nav {
+		margin-bottom: rem(90);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(40);
+		}
+	}
+	// .footer__list
+	&__list {
+		@media (min-width: $mobile) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	// .footer__item
+	&__item {
+		text-align: center;
+		&:not(:last-child) {
+			margin-right: rem(20);
+		}
+		@media (max-width: $mobile) {
+			text-align: left;
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	// .footer__link
+	&__link {
+		text-transform: uppercase;
+		font-size: rem(14);
+		line-height: math.div(18, 14);
+		letter-spacing: math.div(2, 14) * 1em;
+		font-weight: 500;
+	}
+	// .footer__bottom
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		position: relative;
+		margin-right: auto;
+		padding-right: rem(20);
+		background-image: url("@img/logo-light.svg");
+		@media (max-width: $tablet) {
+			margin-bottom: rem(30);
+		}
+	}
+	// .footer__contacts
+	&__contacts {
+		width: 100%;
+		@media (min-width: $mobileSmall) {
+			display: flex;
+			justify-content: flex-end;
+			align-items: start;
+			@media (max-width: $tablet) {
+				justify-content: flex-start;
+			}
+		}
+		.contacts__block {
+			&:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: rem(80);
+				@media (max-width: $tablet) {
+					margin-bottom: 0;
+					margin-right: rem(30);
+				}
+				@media (max-width: $mobileSmall) {
+					margin-bottom: rem(30);
+				}
+			}
+			&:last-child {
+				flex: 0 0 rem(280);
+			}
+		}
+		@media (min-width: $tablet) {
+			flex: 0 0 rem(560);
+		}
+	}
+}
+//================================================================================

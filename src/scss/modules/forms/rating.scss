@@ -1,0 +1,54 @@
+//================================================================================
+.rating {
+	// .rating__caption
+	&__caption {
+	}
+	// .rating__group
+	&__group {
+		position: relative;
+		width: rem(80);
+		height: rem(16);
+		background-image: url("@img/star-off.svg");
+		background-repeat: repeat-x;
+		background-size: rem(16);
+	}
+	// .rating__star
+	&__star {
+		cursor: pointer;
+		appearance: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: rem(16);
+		background-repeat: repeat-x;
+		background-size: rem(16);
+		&:checked,
+		&:hover {
+			background-image: url("@img/star-on.svg");
+		}
+		&:hover ~ .rating__star {
+			background-image: url("@img/star-off.svg");
+		}
+		&:nth-of-type(1) {
+			z-index: 5;
+			width: rem(16);
+		}
+		&:nth-of-type(2) {
+			z-index: 4;
+			width: rem(32);
+		}
+		&:nth-of-type(3) {
+			z-index: 3;
+			width: rem(48);
+		}
+		&:nth-of-type(4) {
+			z-index: 2;
+			width: rem(64);
+		}
+		&:nth-of-type(5) {
+			z-index: 1;
+			width: rem(80);
+		}
+	}
+}
+//================================================================================

@@ -1,0 +1,112 @@
+//================================================================================
+$selectHeight: rem(40);
+$selectWidth: 100%;
+
+$selectPaddingX: rem(15);
+$selectPaddingY: rem(5);
+
+$selectBorder: rem(1) solid #000;
+$selectBorderRadius: 0;
+
+$selectBackgroundColor: #fff;
+
+$selectOptionActiveColor: #ddd;
+$selectOptionHoverColor: #999;
+
+$selectArrow: url("@img/icons/sprite.svg#arrow-bottom");
+$selectArrowSize: rem(10);
+
+.select {
+	position: relative;
+	// .select__wrapper
+	&__wrapper {
+		position: relative;
+	}
+	// .select__native
+	&__native {
+		// отключаем дефолтную стрелочку
+		appearance: none;
+		position: relative;
+		width: 100%;
+		max-width: $selectWidth;
+		min-height: $selectHeight;
+		padding: $selectPaddingY $selectPaddingX;
+		border-radius: $selectBorderRadius;
+		border: $selectBorder;
+		font-size: rem(16);
+		line-height: math.div(24, 16);
+		background-color: $selectBackgroundColor;
+		background-image: $selectArrow;
+		background-position: center right $selectPaddingX;
+		background-repeat: no-repeat;
+		background-size: $selectArrowSize;
+		&:focus + .select__custom {
+			display: none;
+		}
+	}
+	// .select__custom
+	&__custom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-width: $selectWidth;
+		width: 100%;
+		&.active {
+			.select__options {
+				display: block;
+			}
+		}
+	}
+	// .select__trigger
+	&__trigger {
+		cursor: pointer;
+		position: relative;
+		padding: $selectPaddingY $selectPaddingX;
+		min-height: $selectHeight;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: $selectBorderRadius;
+		border: $selectBorder;
+		background-color: $selectBackgroundColor;
+		&::after {
+			content: "";
+			width: $selectArrowSize;
+			height: $selectArrowSize;
+			background-image: $selectArrow;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	// .select__options
+	&__options {
+		z-index: 5;
+		display: none;
+		position: absolute;
+		top: calc(100% - 1px);
+		left: 0;
+		width: 100%;
+		border: $selectBorder;
+		background-color: $selectBackgroundColor;
+	}
+	// .select__option
+	&__option {
+		cursor: default;
+		padding: rem(5) $selectPaddingX;
+		&.active {
+			background-color: $selectOptionActiveColor;
+		}
+		&.hover {
+			background-color: $selectOptionHoverColor;
+		}
+		&:not(:last-child) {
+			border-bottom: $selectBorder;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $selectOptionHoverColor;
+			}
+		}
+	}
+}
+//================================================================================
